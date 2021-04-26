@@ -1,289 +1,311 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>C++博客收藏汇总</title>
-    <url>/2020/03/01/C-%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1><h2 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h2><p><a href="https://www.cnblogs.com/chenwx-jay/p/inline_cpp.html">c++内联函数解析（inline）</a></p>
-<p><a href="https://www.cnblogs.com/msdn1433/p/3569176.html">C++ inline(内联什么时候使用)</a></p>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><p><a href="https://blog.csdn.net/piaoxuezhong/article/details/54348787">C++中STL用法总结</a></p>
-<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><p><a href="https://www.cnblogs.com/zhonghuasong/p/5975979.html">C++ STL之vector用法总结</a></p>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h3><p><a href="https://blog.csdn.net/a769973411/article/details/80112655">c++ 排列和字典序全排列解析</a></p>
-<h3 id="最大最小值"><a href="#最大最小值" class="headerlink" title="最大最小值"></a>最大最小值</h3><p><a href="https://blog.csdn.net/yangyangyang20092010/article/details/47863477">C++ Vector 最大 最小值 索引 位置</a></p>
-<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><p><a href="https://blog.csdn.net/Ackerman2/article/details/103780911">c++STL库中find()的简单使用示例</a></p>
-]]></content>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/04/23/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Github Action 尝鲜</title>
-    <url>/2020/03/03/Github-Action-%E5%B0%9D%E9%B2%9C/</url>
-    <content><![CDATA[<p>发现GitHub上有个Action功能. 查阅后,感觉它能当成一个远端的服务器用.<br>于是搜寻教程,自动在库 <code>.github/workflows/</code>目录下创建了.yml文件.<br>配置一下这个文件基本就万事大吉了.</p>
-<p>主要实现让自己仓库里的文件能在action理运行, 并且让github回传送txt文件</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Run</span> <span class="string">Python</span> <span class="string">&amp;</span> <span class="string">up</span> <span class="string">.txt</span> <span class="string">file</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">master</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Set</span> <span class="string">up</span> <span class="string">Python</span> <span class="number">3.8</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-python@v1</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">python-version:</span> <span class="number">3.8</span>      </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Run</span> <span class="string">python</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">git</span> <span class="string">clone</span> <span class="string">https://github.com/Ackermannn/TestAction.git</span></span><br><span class="line">        <span class="string">python</span> <span class="string">hello.py</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Up</span> <span class="string">something</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">mkdir</span> <span class="string">-p</span> <span class="string">path/to/artifact</span></span><br><span class="line">        <span class="string">echo</span> <span class="string">hello</span> <span class="string">&gt;</span> <span class="string">path/to/artifact/world.txt</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/upload-artifact@v1</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">          <span class="attr">name:</span> <span class="string">my-artifact</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">path/to/artifact</span></span><br></pre></td></tr></table></figure>
-
-<p>参考链接:</p>
-<p><a href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html">阮一峰的网络日志:GitHub Actions 入门教程</a></p>
-<p><a href="https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions">action/setup-python的官方文档</a></p>
-<p><a href="https://github.com/actions/upload-artifact">actions/upload-artifact</a></p>
-]]></content>
-      <tags>
-        <tag>Github Action</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>matplotlib画图中文显示的错误</title>
-    <url>/2020/04/18/matplotlib%E7%94%BB%E5%9B%BE%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E7%9A%84%E9%94%99%E8%AF%AF/</url>
-    <content><![CDATA[<p>使用python的matplotlib库画图时，xlabel title 会出现中文无法显示的问题。可以参考一下代码解决问题</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修补画图时 中文乱码的问题</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>python</tag>
-        <tag>matplotlib</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python修改工作路径</title>
-    <url>/2020/04/18/python%E4%BF%AE%E6%94%B9%E5%B7%A5%E4%BD%9C%E8%B7%AF%E5%BE%84/</url>
-    <content><![CDATA[<h1 id="修改工作路径方便测试开发"><a href="#修改工作路径方便测试开发" class="headerlink" title="修改工作路径方便测试开发"></a>修改工作路径方便测试开发</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment"># 修改工作路径方便测试开发</span></span><br><span class="line">path = <span class="string">r&quot;C:\Users\Administrator\Documents\GitHub\BF-grading-range\\&quot;</span></span><br><span class="line">os.chdir(path)  <span class="comment"># 也可 ../ 如此切换路径</span></span><br></pre></td></tr></table></figure>
-
-<p>此外</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">os.getcwd() <span class="comment"># 查看工作路径</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="例子二"><a href="#例子二" class="headerlink" title="例子二"></a>例子二</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chdir</span>():</span></span><br><span class="line">    <span class="comment"># 切换工作路径</span></span><br><span class="line">    <span class="keyword">import</span> os</span><br><span class="line">    path = <span class="string">&quot;../&quot;</span></span><br><span class="line">    os.chdir(path)</span><br><span class="line">    a = os.getcwd()</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br><span class="line">	</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    chdir()</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.runoob.com/python/os-chdir.html">https://www.runoob.com/python/os-chdir.html</a></p>
-]]></content>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>postgresql使用速记</title>
-    <url>/2020/05/24/postgresql%E4%BD%BF%E7%94%A8%E9%80%9F%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="基本使用1"><a href="#基本使用1" class="headerlink" title="基本使用1"></a>基本使用<a href="https://www.jianshu.com/p/34afe4072598">1</a></h1><p>登录</p>
-<pre><code>psql -U postgres</code></pre><p>创建数据库用户</p>
-<pre><code>CREATE USER user_name WITH PASSWORD &apos;password&apos;;</code></pre><p>创建用户数据库</p>
-<pre><code>CREATE DATABASE user_name OWNER user_name;</code></pre><p>给予权限</p>
-<pre><code>GRANT ALL PRIVILEGES ON DATABASE user_name to user_name;</code></pre><p>删除用户与数据库</p>
-<pre><code>DROP DATABASE user_name;
-DROP USER user_name;</code></pre><p>控制台命令</p>
-<pre><code>\l 列出所有数据库
-\d 列出当前数据库的所有表格
-\d [table_name] 列出某一张表格的结构
-\c [database_name] 切换数据库
-\c - [user_name] 切换用户</code></pre><p>查看数据库占用的物理存储空间大小<a href="https://www.cnblogs.com/liuyuanyuanGOGO/p/3224554.html">2</a></p>
-<p>sql语句查询：</p>
-<pre><code>postgres=# select pg_size_pretty(pg_database_size(&apos;postgres&apos;));
-
-pg_size_pretty
-----------------
-6229 kB
-(1 行记录)</code></pre><h1 id="配置PostgreSQL允许远程连接的方法"><a href="#配置PostgreSQL允许远程连接的方法" class="headerlink" title="配置PostgreSQL允许远程连接的方法"></a>配置PostgreSQL允许远程连接的方法</h1><p><a href="https://blog.csdn.net/u014698745/article/details/86612511?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-6">配置PostgreSQL允许远程连接的方法（PostgreSQL新手入坑）</a></p>
-<p>linux 下怎么看postgresql安装到哪个目录了？</p>
-<pre><code>psql -U postgres -c &apos;SHOW config_file&apos;</code></pre><p>可参考以下配置文件目录：</p>
-<pre><code>sudo vim /var/lib/postgres/data/postgresql.conf
-sudo vim /var/lib/postgres/data/pg_hba.conf</code></pre><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.jianshu.com/p/34afe4072598">https://www.jianshu.com/p/34afe4072598</a></p>
-<p><a href="https://www.cnblogs.com/liuyuanyuanGOGO/p/3224554.html">https://www.cnblogs.com/liuyuanyuanGOGO/p/3224554.html</a></p>
-<h1 id="踩坑笔记"><a href="#踩坑笔记" class="headerlink" title="踩坑笔记"></a>踩坑笔记</h1><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>如果出现这种情况：</p>
-<pre><code>~ &gt;&gt;&gt; psql
-psql: error: could not connect to server: could not connect to server: No such file or directory
-        Is the server running locally and accepting
-        connections on Unix domain socket &quot;/run/postgresql/.s.PGSQL.5432&quot;?</code></pre><p>是根本没启动！！！<br>一个命令可直接启动</p>
-<pre><code>sudo systemctl start postgresql.service
-sudo systemctl restart postgresql.service</code></pre>]]></content>
-      <tags>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python创建文件夹</title>
-    <url>/2020/04/18/python%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/</url>
-    <content><![CDATA[<p>如果文件夹不存在 创建文件夹</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(dirs):</span><br><span class="line">    os.makedirs(dirs)</span><br></pre></td></tr></table></figure>
-
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://blog.csdn.net/qq_39575835/article/details/103974778">https://blog.csdn.net/qq_39575835/article/details/103974778</a></p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>力扣1011.在D天内送达包裹的能力</title>
+      <link href="2021/04/26/1011-%E5%9C%A8D%E5%A4%A9%E5%86%85%E9%80%81%E8%BE%BE%E5%8C%85%E8%A3%B9%E7%9A%84%E8%83%BD%E5%8A%9B/"/>
+      <url>2021/04/26/1011-%E5%9C%A8D%E5%A4%A9%E5%86%85%E9%80%81%E8%BE%BE%E5%8C%85%E8%A3%B9%E7%9A%84%E8%83%BD%E5%8A%9B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>传送带上的包裹必须在 <code>D</code> 天内从一个港口运送到另一个港口。</p><p>传送带上的第 <code>i</code> 个包裹的重量为 <code>weights[i]</code>。每一天，我们都会按给出重量的顺序往传送带上装载包裹。我们装载的重量不会超过船的最大运载重量。</p><p>返回能在 <code>D</code> 天内将传送带上的所有包裹送达的船的最低运载能力。</p><p><strong>示例 1：</strong></p><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">输入：weights = [1,2,3,4,5,6,7,8,9,10], D = 5</span><br><span class="line">输出：15</span><br><span class="line">解释：</span><br><span class="line">船舶最低载重<span class="number"> 15 </span>就能够在<span class="number"> 5 </span>天内送达所有包裹，如下所示：</span><br><span class="line">第<span class="number"> 1 </span>天：1, 2, 3, 4, 5</span><br><span class="line">第<span class="number"> 2 </span>天：6, 7</span><br><span class="line">第<span class="number"> 3 </span>天：8</span><br><span class="line">第<span class="number"> 4 </span>天：9</span><br><span class="line">第<span class="number"> 5 </span>天：10</span><br><span class="line"></span><br><span class="line">请注意，货物必须按照给定的顺序装运，因此使用载重能力为<span class="number"> 14 </span>的船舶并将包装分成 (2, 3, 4, 5), (1, 6, 7), (8), (9), (10) 是不允许的。 </span><br></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：weights = [3,2,2,4,1,4], D = 3</span><br><span class="line">输出：6</span><br><span class="line">解释：</span><br><span class="line">船舶最低载重<span class="number"> 6 </span>就能够在<span class="number"> 3 </span>天内送达所有包裹，如下所示：</span><br><span class="line">第<span class="number"> 1 </span>天：3, 2</span><br><span class="line">第<span class="number"> 2 </span>天：2, 4</span><br><span class="line">第<span class="number"> 3 </span>天：1, 4</span><br></pre></td></tr></table></figure><p><strong>示例 3：</strong></p><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：weights = [1,2,3,1,1], D = 4</span><br><span class="line">输出：3</span><br><span class="line">解释：</span><br><span class="line">第<span class="number"> 1 </span>天：1</span><br><span class="line">第<span class="number"> 2 </span>天：2</span><br><span class="line">第<span class="number"> 3 </span>天：3</span><br><span class="line">第<span class="number"> 4 </span>天：1, 1</span><br></pre></td></tr></table></figure><p><strong>提示：</strong></p><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span>&lt;= D &lt;= weights.length &lt;= <span class="number">50000</span></span><br><span class="line"><span class="symbol">1 </span>&lt;= weights[i] &lt;= <span class="number">500</span></span><br></pre></td></tr></table></figure><p>来源：<a href="https://leetcode-cn.com/problems/capacity-to-ship-packages-within-d-days">链接</a></p><h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><p>二分法</p><p>引用用户<a href="https://leetcode-cn.com/u/jiayangwu/">@Celia</a>的<a href="https://leetcode-cn.com/problems/capacity-to-ship-packages-within-d-days/comments/46984">解释</a>：</p><blockquote><p>二分查找，根据题意，结果一定落在【max(weights), sum(weights）】这个区间之间，因为左端点对应每天一条船，右端点对应只有一条超级大船。 然后利用二分法，每一次循环模拟运货的过程，然后根据需要的天数与 输入 D 的关系来调整区间左右端点。</p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">shipWithinDays</span>(<span class="params">self, weights: <span class="type">List</span>[<span class="built_in">int</span>], D: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        l, r = <span class="built_in">max</span>(weights), <span class="built_in">sum</span>(weights)</span><br><span class="line">        <span class="keyword">while</span> l &lt; r:</span><br><span class="line">            mid = (l + r) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> self.isEnough(weights, D, mid) <span class="keyword">is</span> <span class="literal">False</span>:</span><br><span class="line">                l = mid + <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                r = mid</span><br><span class="line">        <span class="keyword">return</span> l</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isEnough</span>(<span class="params">self, weights, D, load</span>):</span></span><br><span class="line">        curD, curLoad = <span class="number">1</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> w <span class="keyword">in</span> weights:</span><br><span class="line">            <span class="keyword">if</span> curLoad + w &gt; load:</span><br><span class="line">                curLoad = w</span><br><span class="line">                curD += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                curLoad += w</span><br><span class="line">            <span class="keyword">if</span> curD &gt; D: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>python</category>
+          
+          <category> 力扣 </category>
+          
       </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python读取pickle,csv,excel文件速度大比拼</title>
-    <url>/2021/04/23/python%E8%AF%BB%E5%8F%96pickle-csv-excel%E6%96%87%E4%BB%B6%E9%80%9F%E5%BA%A6%E5%A4%A7%E6%AF%94%E6%8B%BC/</url>
-    <content><![CDATA[<p>进行数据处理时数据量一大，excel文件就力不从心。<br>这次对三个文件格式的读取速度做大比拼。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">csv</span></span><br><span class="line"><span class="string">excel</span></span><br><span class="line"><span class="string">pkl</span></span><br><span class="line"><span class="string">速度大比拼</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">start = time.clock()</span><br><span class="line">df = pd.read_pickle(<span class="string">&#x27;table.pkl&#x27;</span>)</span><br><span class="line">elapsed = (time.clock() - start)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;PKL Time used:&quot;</span>, elapsed)</span><br><span class="line"></span><br><span class="line">start = time.clock()</span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;table.csv&#x27;</span>)</span><br><span class="line">elapsed = (time.clock() - start)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;CSV Time used:&quot;</span>, elapsed)</span><br><span class="line"></span><br><span class="line">start = time.clock()</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;table.xlsx&#x27;</span>)</span><br><span class="line">elapsed = (time.clock() - start)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;EXCEL Time used:&quot;</span>, elapsed)</span><br></pre></td></tr></table></figure>
-
-<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">PKL</span> Time used: <span class="number">0</span>.<span class="number">0913808</span></span><br><span class="line"><span class="attribute">CSV</span> Time used: <span class="number">0</span>.<span class="number">2128232</span></span><br><span class="line"><span class="attribute">EXCEL</span> Time used: <span class="number">10</span>.<span class="number">9964416</span></span><br></pre></td></tr></table></figure>
-<p>pickle完美胜出。参考链接中有大佬的更详细的比拼。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.jianshu.com/p/d857c0f472f4">https://www.jianshu.com/p/d857c0f472f4</a></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 力扣 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣377.组合综合Ⅳ</title>
+      <link href="2021/04/24/%E5%8A%9B%E6%89%A3377-%E7%BB%84%E5%90%88%E7%BB%BC%E5%90%88%E2%85%A3/"/>
+      <url>2021/04/24/%E5%8A%9B%E6%89%A3377-%E7%BB%84%E5%90%88%E7%BB%BC%E5%90%88%E2%85%A3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给你一个由 不同 整数组成的数组 nums ，和一个目标整数 target 。请你从 nums 中找出并返回总和为 target 的元素组合的个数。</p><p>题目数据保证答案符合 32 位整数范围。</p><p><strong>示例 1：</strong></p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="attr">nums</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], <span class="attr">target</span> = <span class="number">4</span></span><br><span class="line">输出：<span class="number">7</span></span><br><span class="line">解释：</span><br><span class="line">所有可能的组合为：</span><br><span class="line">(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line">(<span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="number">3</span>, <span class="number">1</span>)</span><br><span class="line">请注意，顺序不同的序列被视作不同的组合。</span><br></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="attr">nums</span> = [<span class="number">9</span>], <span class="attr">target</span> = <span class="number">3</span></span><br><span class="line">输出：<span class="number">0</span></span><br></pre></td></tr></table></figure><p><strong>提示：</strong></p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">1</span> &lt;= nums.length &lt;= <span class="number">200</span></span><br><span class="line"><span class="attribute">1</span> &lt;= nums[i] &lt;= <span class="number">1000</span></span><br><span class="line"><span class="attribute">nums</span> 中的所有元素 互不相同</span><br><span class="line"><span class="attribute">1</span> &lt;= target &lt;= <span class="number">1000</span></span><br></pre></td></tr></table></figure><p><strong>进阶：</strong>如果给定的数组中含有负数会发生什么？问题会产生何种变化？如果允许负数出现，需要向题目中添加哪些限制条件？</p><p>来源：力扣（LeetCode）</p><p>链接：<a href="https://leetcode-cn.com/problems/combination-sum-iv">https://leetcode-cn.com/problems/combination-sum-iv</a></p><h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><p>递归。加上lru_cache后不会超时</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combinationSum4</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        self.nums = nums</span><br><span class="line">        <span class="keyword">return</span> self.recur(target)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @lru_cache(<span class="params"><span class="number">1000</span> * <span class="number">1000</span></span>)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recur</span>(<span class="params">self, target</span>):</span></span><br><span class="line">        ret = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> target == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> self.nums:</span><br><span class="line">            <span class="keyword">if</span> x &lt;= target:</span><br><span class="line">                ret += self.recur(target - x)</span><br><span class="line">        <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure><p>动态规划</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combinationSum4</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        dp = [<span class="number">1</span>] + [<span class="number">0</span>] * target</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, target + <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> nums:</span><br><span class="line">                <span class="keyword">if</span> x &lt;= i:</span><br><span class="line">                    dp[i] += dp[i - x]</span><br><span class="line">        <span class="keyword">return</span> dp[target]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>python</category>
+          
+          <category> 力扣 </category>
+          
       </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo 个人博客搭建历程</title>
-    <url>/2020/03/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p>参考知乎这个链接</p>
-<p><a href="https://zhuanlan.zhihu.com/p/106166402">https://zhuanlan.zhihu.com/p/106166402</a></p>
-<p>B站里up主Codesheep也有搭建视频</p>
-<p><a href="https://www.bilibili.com/video/av44544186/">https://www.bilibili.com/video/av44544186/</a></p>
-<h1 id="大体步骤"><a href="#大体步骤" class="headerlink" title="大体步骤"></a>大体步骤</h1><ol>
-<li>安装 git</li>
-<li>安装Node.js</li>
-<li>在Node.js里安装Hexo</li>
-<li>选取喜欢的主题套用修改</li>
-</ol>
-<h1 id="安装中碰到的问题-amp-解决方案"><a href="#安装中碰到的问题-amp-解决方案" class="headerlink" title="安装中碰到的问题&amp;解决方案"></a>安装中碰到的问题&amp;解决方案</h1><p><a href="https://blog.csdn.net/weixin_36401046/article/details/52940313">hexo d后 ERROR Deployer not found: git</a></p>
-<p><a href="https://blog.csdn.net/weixin_45122120/article/details/91872691">解决git下载很慢的问题</a></p>
-<p><a href="https://blog.csdn.net/qq_27093465/article/details/72954725?locationNum=6&fps=1">HEXO安装(Win7 64 bit )，遇到cmd报错：’hexo’ 不是内部或外部命令，也不是可运行的程序</a><br>(简单总结：需要配置hexo的环境变量)</p>
-<p>Tips：</p>
-<ol>
-<li><p>把出现的错误代码直接复制到百度就可找到解决方法</p>
-</li>
-<li><p>在下载国外的一些工具时,可以考虑下载镜像,速度飞起</p>
-</li>
-</ol>
-<h1 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h1><p>创建新文件：</p>
-<pre><code>hexo n &quot;新的文章名&quot;</code></pre><p>生成页面：</p>
-<pre><code>hexo g </code></pre><p>在本地浏览器查看效果:</p>
-<pre><code>hexo s</code></pre><p>部署到远端服务器:</p>
-<pre><code>hexo d</code></pre><h1 id="更多资料"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料</h1><p>另外发现更多的Hexo教程<br><a href="http://ijiaober.github.io/categories/hexo/">Hexo使用攻略</a></p>
-<p><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/tags/Icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97/">Icarus中文用户指南</a></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣377.组合综合Ⅳ</title>
-    <url>/2021/04/24/%E5%8A%9B%E6%89%A3377-%E7%BB%84%E5%90%88%E7%BB%BC%E5%90%88%E2%85%A3/</url>
-    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给你一个由 不同 整数组成的数组 nums ，和一个目标整数 target 。请你从 nums 中找出并返回总和为 target 的元素组合的个数。</p>
-<p>题目数据保证答案符合 32 位整数范围。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入：<span class="attr">nums</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], <span class="attr">target</span> = <span class="number">4</span></span><br><span class="line">输出：<span class="number">7</span></span><br><span class="line">解释：</span><br><span class="line">所有可能的组合为：</span><br><span class="line">(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line">(<span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">(<span class="number">3</span>, <span class="number">1</span>)</span><br><span class="line">请注意，顺序不同的序列被视作不同的组合。</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入：<span class="attr">nums</span> = [<span class="number">9</span>], <span class="attr">target</span> = <span class="number">3</span></span><br><span class="line">输出：<span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span> &lt;= nums.length &lt;= <span class="number">200</span></span><br><span class="line"><span class="attribute">1</span> &lt;= nums[i] &lt;= <span class="number">1000</span></span><br><span class="line"><span class="attribute">nums</span> 中的所有元素 互不相同</span><br><span class="line"><span class="attribute">1</span> &lt;= target &lt;= <span class="number">1000</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>进阶：</strong>如果给定的数组中含有负数会发生什么？问题会产生何种变化？如果允许负数出现，需要向题目中添加哪些限制条件？</p>
-<p>来源：力扣（LeetCode）</p>
-<p>链接：<a href="https://leetcode-cn.com/problems/combination-sum-iv">https://leetcode-cn.com/problems/combination-sum-iv</a></p>
-<h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><p>递归。加上lru_cache后不会超时</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combinationSum4</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        self.nums = nums</span><br><span class="line">        <span class="keyword">return</span> self.recur(target)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @lru_cache(<span class="params"><span class="number">1000</span> * <span class="number">1000</span></span>)</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recur</span>(<span class="params">self, target</span>):</span></span><br><span class="line">        ret = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> target == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> self.nums:</span><br><span class="line">            <span class="keyword">if</span> x &lt;= target:</span><br><span class="line">                ret += self.recur(target - x)</span><br><span class="line">        <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
-
-<p>动态规划</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combinationSum4</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        dp = [<span class="number">1</span>] + [<span class="number">0</span>] * target</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, target + <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> x <span class="keyword">in</span> nums:</span><br><span class="line">                <span class="keyword">if</span> x &lt;= i:</span><br><span class="line">                    dp[i] += dp[i - x]</span><br><span class="line">        <span class="keyword">return</span> dp[target]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 力扣 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣69.x的平方根</title>
+      <link href="2021/04/23/%E5%8A%9B%E6%89%A369-x%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9/"/>
+      <url>2021/04/23/%E5%8A%9B%E6%89%A369-x%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9/</url>
+      
+        <content type="html"><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>实现 <code>int sqrt(int x)</code> 函数。</p><p>计算并返回 <code>x</code> 的平方根，其中 <code>x</code> 是非负整数。</p><p>由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p><p>示例 1:</p><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: 4</span></span><br><span class="line"><span class="section">输出: 2</span></span><br></pre></td></tr></table></figure><p>示例 2:</p><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">输入: 8</span></span><br><span class="line"><span class="section">输出: 2</span></span><br><span class="line"><span class="section">说明: 8 的平方根是 2.82842..., </span></span><br><span class="line">     由于返回类型是整数，小数部分将被舍去。</span><br></pre></td></tr></table></figure><p>链接：</p><p><a href="https://leetcode-cn.com/problems/sqrtx/">https://leetcode-cn.com/problems/sqrtx/</a></p><h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>二分法是符合计算机思想的解法。</p><p>二分查找的下界为 0，上界可以粗略地设定为 x。在二分查找的每一步中，我们只需要比较中间元素 bit 的平方与 x 的大小关系，并通过比较的结果调整上下界的范围。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span>(<span class="params">self, x: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> x == <span class="number">0</span>: <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        small = <span class="number">1</span></span><br><span class="line">        big = x</span><br><span class="line">        <span class="keyword">while</span> big - small &gt; <span class="number">1</span>:</span><br><span class="line">            bit = (small + big) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> bit ** <span class="number">2</span> == x:</span><br><span class="line">                <span class="keyword">return</span> bit</span><br><span class="line">            <span class="keyword">elif</span> bit ** <span class="number">2</span> &lt; x:</span><br><span class="line">                small = bit</span><br><span class="line">            <span class="keyword">elif</span> bit ** <span class="number">2</span> &gt; x:</span><br><span class="line">                big = bit</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">int</span>(small)</span><br></pre></td></tr></table></figure><h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2><p>这个题解说的比较好：</p><p><a href="https://link.zhihu.com/?target=https%3A//leetcode-cn.com/problems/sqrtx/solution/niu-dun-die-dai-fa-by-loafer/">https://link.zhihu.com/?target=https%3A//leetcode-cn.com/problems/sqrtx/solution/niu-dun-die-dai-fa-by-loafer/</a></p><p>该方法比较适合机器学习背景。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span>(<span class="params">self, x: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        r = x</span><br><span class="line">        <span class="keyword">while</span> r * r &gt; x:</span><br><span class="line">            r = (r + x / r) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">int</span>(r)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>力扣</category>
+          
+          <category> 力扣 </category>
+          
       </categories>
-      <tags>
-        <tag>力扣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣69.x的平方根</title>
-    <url>/2021/04/23/%E5%8A%9B%E6%89%A369-x%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9/</url>
-    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>实现 <code>int sqrt(int x)</code> 函数。</p>
-<p>计算并返回 <code>x</code> 的平方根，其中 <code>x</code> 是非负整数。</p>
-<p>由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
-<p>示例 1:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: 4</span></span><br><span class="line"><span class="section">输出: 2</span></span><br></pre></td></tr></table></figure>
-
-<p>示例 2:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: 8</span></span><br><span class="line"><span class="section">输出: 2</span></span><br><span class="line"><span class="section">说明: 8 的平方根是 2.82842..., </span></span><br><span class="line">     由于返回类型是整数，小数部分将被舍去。</span><br></pre></td></tr></table></figure>
-
-<p>链接：</p>
-<p><a href="https://leetcode-cn.com/problems/sqrtx/">https://leetcode-cn.com/problems/sqrtx/</a></p>
-<h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>二分法是符合计算机思想的解法。</p>
-<p>二分查找的下界为 0，上界可以粗略地设定为 x。在二分查找的每一步中，我们只需要比较中间元素 bit 的平方与 x 的大小关系，并通过比较的结果调整上下界的范围。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span>(<span class="params">self, x: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> x == <span class="number">0</span>: <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        small = <span class="number">1</span></span><br><span class="line">        big = x</span><br><span class="line">        <span class="keyword">while</span> big - small &gt; <span class="number">1</span>:</span><br><span class="line">            bit = (small + big) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> bit ** <span class="number">2</span> == x:</span><br><span class="line">                <span class="keyword">return</span> bit</span><br><span class="line">            <span class="keyword">elif</span> bit ** <span class="number">2</span> &lt; x:</span><br><span class="line">                small = bit</span><br><span class="line">            <span class="keyword">elif</span> bit ** <span class="number">2</span> &gt; x:</span><br><span class="line">                big = bit</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">int</span>(small)</span><br></pre></td></tr></table></figure>
-
-<h2 id="牛顿法"><a href="#牛顿法" class="headerlink" title="牛顿法"></a>牛顿法</h2><p>这个题解说的比较好：</p>
-<p><a href="https://link.zhihu.com/?target=https%3A//leetcode-cn.com/problems/sqrtx/solution/niu-dun-die-dai-fa-by-loafer/">https://link.zhihu.com/?target=https%3A//leetcode-cn.com/problems/sqrtx/solution/niu-dun-die-dai-fa-by-loafer/</a></p>
-<p>该方法比较适合机器学习背景。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span>(<span class="params">self, x: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        r = x</span><br><span class="line">        <span class="keyword">while</span> r * r &gt; x:</span><br><span class="line">            r = (r + x / r) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">int</span>(r)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 力扣 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>实用python小工具--函数运行时间装饰器</title>
+      <link href="2021/04/23/%E5%AE%9E%E7%94%A8python%E5%B0%8F%E5%B7%A5%E5%85%B7-%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+      <url>2021/04/23/%E5%AE%9E%E7%94%A8python%E5%B0%8F%E5%B7%A5%E5%85%B7-%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E8%A3%85%E9%A5%B0%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<p>装饰器定义如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">def CalculateTime(a_func):</span><br><span class="line">    def wrapTheFunction():</span><br><span class="line">        start &#x3D; time.time()</span><br><span class="line">        a_func()</span><br><span class="line">        cost &#x3D; time.time() - start</span><br><span class="line">        print(f&quot;Function \&quot;&#123;a_func.__name__&#125;\&quot; cost : &#123;cost&#125; second(s).&quot;)</span><br><span class="line">    return wrapTheFunction</span><br></pre></td></tr></table></figure><p>测试部分</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@CalculateTime</span><br><span class="line">def func():</span><br><span class="line">    s &#x3D; 0</span><br><span class="line">    for i in range(10 ** 7):</span><br><span class="line">        s +&#x3D; 1</span><br><span class="line">    print(s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    func()</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>结果</p><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10000000</span></span><br><span class="line"><span class="keyword">Function</span> <span class="title">&quot;func&quot;</span> cost : 1.7449958324432373 <span class="type">second</span>(s).</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>力扣</category>
+          
+          <category> python </category>
+          
       </categories>
-      <tags>
-        <tag>力扣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实用python小工具--函数运行时间装饰器</title>
-    <url>/2021/04/23/%E5%AE%9E%E7%94%A8python%E5%B0%8F%E5%B7%A5%E5%85%B7-%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E8%A3%85%E9%A5%B0%E5%99%A8/</url>
-    <content><![CDATA[<p>装饰器定义如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import time</span><br><span class="line">def CalculateTime(a_func):</span><br><span class="line">    def wrapTheFunction():</span><br><span class="line">        start &#x3D; time.time()</span><br><span class="line">        a_func()</span><br><span class="line">        cost &#x3D; time.time() - start</span><br><span class="line">        print(f&quot;Function \&quot;&#123;a_func.__name__&#125;\&quot; cost : &#123;cost&#125; second(s).&quot;)</span><br><span class="line">    return wrapTheFunction</span><br></pre></td></tr></table></figure>
-
-<p>测试部分</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@CalculateTime</span><br><span class="line">def func():</span><br><span class="line">    s &#x3D; 0</span><br><span class="line">    for i in range(10 ** 7):</span><br><span class="line">        s +&#x3D; 1</span><br><span class="line">    print(s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    func()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>结果</p>
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line"><span class="number">10000000</span></span><br><span class="line"><span class="keyword">Function</span> <span class="title">&quot;func&quot;</span> cost : 1.7449958324432373 <span class="type">second</span>(s).</span><br></pre></td></tr></table></figure>
-
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>箱型图法处理异常</title>
+      <link href="2021/04/23/%E7%AE%B1%E5%9E%8B%E5%9B%BE%E6%B3%95%E5%A4%84%E7%90%86%E5%BC%82%E5%B8%B8/"/>
+      <url>2021/04/23/%E7%AE%B1%E5%9E%8B%E5%9B%BE%E6%B3%95%E5%A4%84%E7%90%86%E5%BC%82%E5%B8%B8/</url>
+      
+        <content type="html"><![CDATA[<p>箱型图介绍看链接：</p><p><a href="https://blog.csdn.net/oJiWuXuan/article/details/107815803">Python异常数据处理——箱型图分析</a></p><p>一下Python是使用箱型图找到异常值并用线性插值把剔除异常后的缺失填充上。</p><h1 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wash_data</span>(<span class="params">df: pd.DataFrame</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;箱型图法&quot;&quot;&quot;</span></span><br><span class="line">    q1 = df.quantile(<span class="number">0.25</span>)</span><br><span class="line">    q3 = df.quantile(<span class="number">0.75</span>)</span><br><span class="line">    iqr = q3 - q1</span><br><span class="line">    mi = q1 - <span class="number">1.5</span> * iqr</span><br><span class="line">    ma = q3 + <span class="number">1.5</span> * iqr</span><br><span class="line">    <span class="comment"># error = df[(df &lt; mi) | (df &gt; ma)]</span></span><br><span class="line">    data_c = df[(df &gt;= mi) &amp; (df &lt;= ma)]</span><br><span class="line">    <span class="keyword">return</span> data_c.interpolate().bfill()  <span class="comment"># 线性插值</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    df = pd.DataFrame(data=np.random.rand(<span class="number">10</span>, <span class="number">2</span>))</span><br><span class="line">    df[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">100</span></span><br><span class="line">    df[<span class="number">0</span>][<span class="number">2</span>] = <span class="number">99</span></span><br><span class="line">    <span class="built_in">print</span>(df)</span><br><span class="line">    washedDf = wash_data(df)</span><br><span class="line">    <span class="built_in">print</span>(washedDf)</span><br></pre></td></tr></table></figure><p>输出结果</p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">            <span class="number">0</span>         <span class="number">1</span></span><br><span class="line"><span class="number">0</span>    <span class="number">0.385158</span>  <span class="number">0.469756</span></span><br><span class="line"><span class="number">1</span>  <span class="number">100.000000</span>  <span class="number">0.090029</span></span><br><span class="line"><span class="number">2</span>   <span class="number">99.000000</span>  <span class="number">0.807008</span></span><br><span class="line"><span class="number">3</span>    <span class="number">0.832849</span>  <span class="number">0.672141</span></span><br><span class="line"><span class="number">4</span>    <span class="number">0.965382</span>  <span class="number">0.847540</span></span><br><span class="line"><span class="number">5</span>    <span class="number">0.275084</span>  <span class="number">0.003218</span></span><br><span class="line"><span class="number">6</span>    <span class="number">0.366026</span>  <span class="number">0.211611</span></span><br><span class="line"><span class="number">7</span>    <span class="number">0.462773</span>  <span class="number">0.226748</span></span><br><span class="line"><span class="number">8</span>    <span class="number">0.244522</span>  <span class="number">0.916068</span></span><br><span class="line"><span class="number">9</span>    <span class="number">0.906602</span>  <span class="number">0.029235</span></span><br><span class="line">          <span class="number">0</span>         <span class="number">1</span></span><br><span class="line"><span class="number">0</span>  <span class="number">0.385158</span>  <span class="number">0.469756</span></span><br><span class="line"><span class="number">1</span>  <span class="number">0.534389</span>  <span class="number">0.090029</span></span><br><span class="line"><span class="number">2</span>  <span class="number">0.683619</span>  <span class="number">0.807008</span></span><br><span class="line"><span class="number">3</span>  <span class="number">0.832849</span>  <span class="number">0.672141</span></span><br><span class="line"><span class="number">4</span>  <span class="number">0.965382</span>  <span class="number">0.847540</span></span><br><span class="line"><span class="number">5</span>  <span class="number">0.275084</span>  <span class="number">0.003218</span></span><br><span class="line"><span class="number">6</span>  <span class="number">0.366026</span>  <span class="number">0.211611</span></span><br><span class="line"><span class="number">7</span>  <span class="number">0.462773</span>  <span class="number">0.226748</span></span><br><span class="line"><span class="number">8</span>  <span class="number">0.244522</span>  <span class="number">0.916068</span></span><br><span class="line"><span class="number">9</span>  <span class="number">0.906602</span>  <span class="number">0.029235</span></span><br><span class="line"></span><br><span class="line">进程已结束，退出代码为 <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>python</category>
+          
+          <category> python </category>
+          
       </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>箱型图法处理异常</title>
-    <url>/2021/04/23/%E7%AE%B1%E5%9E%8B%E5%9B%BE%E6%B3%95%E5%A4%84%E7%90%86%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p>箱型图介绍看链接：</p>
-<p><a href="https://blog.csdn.net/oJiWuXuan/article/details/107815803">Python异常数据处理——箱型图分析</a></p>
-<p>一下Python是使用箱型图找到异常值并用线性插值把剔除异常后的缺失填充上。</p>
-<h1 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wash_data</span>(<span class="params">df: pd.DataFrame</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;箱型图法&quot;&quot;&quot;</span></span><br><span class="line">    q1 = df.quantile(<span class="number">0.25</span>)</span><br><span class="line">    q3 = df.quantile(<span class="number">0.75</span>)</span><br><span class="line">    iqr = q3 - q1</span><br><span class="line">    mi = q1 - <span class="number">1.5</span> * iqr</span><br><span class="line">    ma = q3 + <span class="number">1.5</span> * iqr</span><br><span class="line">    <span class="comment"># error = df[(df &lt; mi) | (df &gt; ma)]</span></span><br><span class="line">    data_c = df[(df &gt;= mi) &amp; (df &lt;= ma)]</span><br><span class="line">    <span class="keyword">return</span> data_c.interpolate().bfill()  <span class="comment"># 线性插值</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    df = pd.DataFrame(data=np.random.rand(<span class="number">10</span>, <span class="number">2</span>))</span><br><span class="line">    df[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">100</span></span><br><span class="line">    df[<span class="number">0</span>][<span class="number">2</span>] = <span class="number">99</span></span><br><span class="line">    <span class="built_in">print</span>(df)</span><br><span class="line">    washedDf = wash_data(df)</span><br><span class="line">    <span class="built_in">print</span>(washedDf)</span><br></pre></td></tr></table></figure>
-<p>输出结果</p>
-<figure class="highlight dns"><table><tr><td class="code"><pre><span class="line">            <span class="number">0</span>         <span class="number">1</span></span><br><span class="line"><span class="number">0</span>    <span class="number">0.385158</span>  <span class="number">0.469756</span></span><br><span class="line"><span class="number">1</span>  <span class="number">100.000000</span>  <span class="number">0.090029</span></span><br><span class="line"><span class="number">2</span>   <span class="number">99.000000</span>  <span class="number">0.807008</span></span><br><span class="line"><span class="number">3</span>    <span class="number">0.832849</span>  <span class="number">0.672141</span></span><br><span class="line"><span class="number">4</span>    <span class="number">0.965382</span>  <span class="number">0.847540</span></span><br><span class="line"><span class="number">5</span>    <span class="number">0.275084</span>  <span class="number">0.003218</span></span><br><span class="line"><span class="number">6</span>    <span class="number">0.366026</span>  <span class="number">0.211611</span></span><br><span class="line"><span class="number">7</span>    <span class="number">0.462773</span>  <span class="number">0.226748</span></span><br><span class="line"><span class="number">8</span>    <span class="number">0.244522</span>  <span class="number">0.916068</span></span><br><span class="line"><span class="number">9</span>    <span class="number">0.906602</span>  <span class="number">0.029235</span></span><br><span class="line">          <span class="number">0</span>         <span class="number">1</span></span><br><span class="line"><span class="number">0</span>  <span class="number">0.385158</span>  <span class="number">0.469756</span></span><br><span class="line"><span class="number">1</span>  <span class="number">0.534389</span>  <span class="number">0.090029</span></span><br><span class="line"><span class="number">2</span>  <span class="number">0.683619</span>  <span class="number">0.807008</span></span><br><span class="line"><span class="number">3</span>  <span class="number">0.832849</span>  <span class="number">0.672141</span></span><br><span class="line"><span class="number">4</span>  <span class="number">0.965382</span>  <span class="number">0.847540</span></span><br><span class="line"><span class="number">5</span>  <span class="number">0.275084</span>  <span class="number">0.003218</span></span><br><span class="line"><span class="number">6</span>  <span class="number">0.366026</span>  <span class="number">0.211611</span></span><br><span class="line"><span class="number">7</span>  <span class="number">0.462773</span>  <span class="number">0.226748</span></span><br><span class="line"><span class="number">8</span>  <span class="number">0.244522</span>  <span class="number">0.916068</span></span><br><span class="line"><span class="number">9</span>  <span class="number">0.906602</span>  <span class="number">0.029235</span></span><br><span class="line"></span><br><span class="line">进程已结束，退出代码为 <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python读取pickle,csv,excel文件速度大比拼</title>
+      <link href="2021/04/23/python%E8%AF%BB%E5%8F%96pickle-csv-excel%E6%96%87%E4%BB%B6%E9%80%9F%E5%BA%A6%E5%A4%A7%E6%AF%94%E6%8B%BC/"/>
+      <url>2021/04/23/python%E8%AF%BB%E5%8F%96pickle-csv-excel%E6%96%87%E4%BB%B6%E9%80%9F%E5%BA%A6%E5%A4%A7%E6%AF%94%E6%8B%BC/</url>
+      
+        <content type="html"><![CDATA[<p>进行数据处理时数据量一大，excel文件就力不从心。<br>这次对三个文件格式的读取速度做大比拼。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">csv</span></span><br><span class="line"><span class="string">excel</span></span><br><span class="line"><span class="string">pkl</span></span><br><span class="line"><span class="string">速度大比拼</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">start = time.clock()</span><br><span class="line">df = pd.read_pickle(<span class="string">&#x27;table.pkl&#x27;</span>)</span><br><span class="line">elapsed = (time.clock() - start)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;PKL Time used:&quot;</span>, elapsed)</span><br><span class="line"></span><br><span class="line">start = time.clock()</span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;table.csv&#x27;</span>)</span><br><span class="line">elapsed = (time.clock() - start)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;CSV Time used:&quot;</span>, elapsed)</span><br><span class="line"></span><br><span class="line">start = time.clock()</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;table.xlsx&#x27;</span>)</span><br><span class="line">elapsed = (time.clock() - start)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;EXCEL Time used:&quot;</span>, elapsed)</span><br></pre></td></tr></table></figure><h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">PKL</span> Time used: <span class="number">0</span>.<span class="number">0913808</span></span><br><span class="line"><span class="attribute">CSV</span> Time used: <span class="number">0</span>.<span class="number">2128232</span></span><br><span class="line"><span class="attribute">EXCEL</span> Time used: <span class="number">10</span>.<span class="number">9964416</span></span><br></pre></td></tr></table></figure><p>pickle完美胜出。参考链接中有大佬的更详细的比拼。</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.jianshu.com/p/d857c0f472f4">https://www.jianshu.com/p/d857c0f472f4</a></p>]]></content>
+      
+      
       <categories>
-        <category>python</category>
+          
+          <category> python </category>
+          
       </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="2021/04/23/hello-world/"/>
+      <url>2021/04/23/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>postgresql使用速记</title>
+      <link href="2020/05/24/postgresql%E4%BD%BF%E7%94%A8%E9%80%9F%E8%AE%B0/"/>
+      <url>2020/05/24/postgresql%E4%BD%BF%E7%94%A8%E9%80%9F%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="基本使用1"><a href="#基本使用1" class="headerlink" title="基本使用1"></a>基本使用<a href="https://www.jianshu.com/p/34afe4072598">1</a></h1><p>登录</p><pre><code>psql -U postgres</code></pre><p>创建数据库用户</p><pre><code>CREATE USER user_name WITH PASSWORD &apos;password&apos;;</code></pre><p>创建用户数据库</p><pre><code>CREATE DATABASE user_name OWNER user_name;</code></pre><p>给予权限</p><pre><code>GRANT ALL PRIVILEGES ON DATABASE user_name to user_name;</code></pre><p>删除用户与数据库</p><pre><code>DROP DATABASE user_name;DROP USER user_name;</code></pre><p>控制台命令</p><pre><code>\l 列出所有数据库\d 列出当前数据库的所有表格\d [table_name] 列出某一张表格的结构\c [database_name] 切换数据库\c - [user_name] 切换用户</code></pre><p>查看数据库占用的物理存储空间大小<a href="https://www.cnblogs.com/liuyuanyuanGOGO/p/3224554.html">2</a></p><p>sql语句查询：</p><pre><code>postgres=# select pg_size_pretty(pg_database_size(&apos;postgres&apos;));pg_size_pretty----------------6229 kB(1 行记录)</code></pre><h1 id="配置PostgreSQL允许远程连接的方法"><a href="#配置PostgreSQL允许远程连接的方法" class="headerlink" title="配置PostgreSQL允许远程连接的方法"></a>配置PostgreSQL允许远程连接的方法</h1><p><a href="https://blog.csdn.net/u014698745/article/details/86612511?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-6">配置PostgreSQL允许远程连接的方法（PostgreSQL新手入坑）</a></p><p>linux 下怎么看postgresql安装到哪个目录了？</p><pre><code>psql -U postgres -c &apos;SHOW config_file&apos;</code></pre><p>可参考以下配置文件目录：</p><pre><code>sudo vim /var/lib/postgres/data/postgresql.confsudo vim /var/lib/postgres/data/pg_hba.conf</code></pre><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.jianshu.com/p/34afe4072598">https://www.jianshu.com/p/34afe4072598</a></p><p><a href="https://www.cnblogs.com/liuyuanyuanGOGO/p/3224554.html">https://www.cnblogs.com/liuyuanyuanGOGO/p/3224554.html</a></p><h1 id="踩坑笔记"><a href="#踩坑笔记" class="headerlink" title="踩坑笔记"></a>踩坑笔记</h1><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>如果出现这种情况：</p><pre><code>~ &gt;&gt;&gt; psqlpsql: error: could not connect to server: could not connect to server: No such file or directory        Is the server running locally and accepting        connections on Unix domain socket &quot;/run/postgresql/.s.PGSQL.5432&quot;?</code></pre><p>是根本没启动！！！<br>一个命令可直接启动</p><pre><code>sudo systemctl start postgresql.servicesudo systemctl restart postgresql.service</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python创建文件夹</title>
+      <link href="2020/04/18/python%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
+      <url>2020/04/18/python%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/</url>
+      
+        <content type="html"><![CDATA[<p>如果文件夹不存在 创建文件夹</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(dirs):</span><br><span class="line">    os.makedirs(dirs)</span><br></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://blog.csdn.net/qq_39575835/article/details/103974778">https://blog.csdn.net/qq_39575835/article/details/103974778</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python修改工作路径</title>
+      <link href="2020/04/18/python%E4%BF%AE%E6%94%B9%E5%B7%A5%E4%BD%9C%E8%B7%AF%E5%BE%84/"/>
+      <url>2020/04/18/python%E4%BF%AE%E6%94%B9%E5%B7%A5%E4%BD%9C%E8%B7%AF%E5%BE%84/</url>
+      
+        <content type="html"><![CDATA[<h1 id="修改工作路径方便测试开发"><a href="#修改工作路径方便测试开发" class="headerlink" title="修改工作路径方便测试开发"></a>修改工作路径方便测试开发</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment"># 修改工作路径方便测试开发</span></span><br><span class="line">path = <span class="string">r&quot;C:\Users\Administrator\Documents\GitHub\BF-grading-range\\&quot;</span></span><br><span class="line">os.chdir(path)  <span class="comment"># 也可 ../ 如此切换路径</span></span><br></pre></td></tr></table></figure><p>此外</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.getcwd() <span class="comment"># 查看工作路径</span></span><br></pre></td></tr></table></figure><h1 id="例子二"><a href="#例子二" class="headerlink" title="例子二"></a>例子二</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chdir</span>():</span></span><br><span class="line">    <span class="comment"># 切换工作路径</span></span><br><span class="line">    <span class="keyword">import</span> os</span><br><span class="line">    path = <span class="string">&quot;../&quot;</span></span><br><span class="line">    os.chdir(path)</span><br><span class="line">    a = os.getcwd()</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    chdir()</span><br></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.runoob.com/python/os-chdir.html">https://www.runoob.com/python/os-chdir.html</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>matplotlib画图中文显示的错误</title>
+      <link href="2020/04/18/matplotlib%E7%94%BB%E5%9B%BE%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E7%9A%84%E9%94%99%E8%AF%AF/"/>
+      <url>2020/04/18/matplotlib%E7%94%BB%E5%9B%BE%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E7%9A%84%E9%94%99%E8%AF%AF/</url>
+      
+        <content type="html"><![CDATA[<p>使用python的matplotlib库画图时，xlabel title 会出现中文无法显示的问题。可以参考一下代码解决问题</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修补画图时 中文乱码的问题</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> matplotlib </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Github Action 尝鲜</title>
+      <link href="2020/03/03/Github-Action-%E5%B0%9D%E9%B2%9C/"/>
+      <url>2020/03/03/Github-Action-%E5%B0%9D%E9%B2%9C/</url>
+      
+        <content type="html"><![CDATA[<p>发现GitHub上有个Action功能. 查阅后,感觉它能当成一个远端的服务器用.<br>于是搜寻教程,自动在库 <code>.github/workflows/</code>目录下创建了.yml文件.<br>配置一下这个文件基本就万事大吉了.</p><p>主要实现让自己仓库里的文件能在action理运行, 并且让github回传送txt文件</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Run</span> <span class="string">Python</span> <span class="string">&amp;</span> <span class="string">up</span> <span class="string">.txt</span> <span class="string">file</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">master</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Set</span> <span class="string">up</span> <span class="string">Python</span> <span class="number">3.8</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-python@v1</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">python-version:</span> <span class="number">3.8</span>      </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Run</span> <span class="string">python</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">git</span> <span class="string">clone</span> <span class="string">https://github.com/Ackermannn/TestAction.git</span></span><br><span class="line">        <span class="string">python</span> <span class="string">hello.py</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Up</span> <span class="string">something</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">mkdir</span> <span class="string">-p</span> <span class="string">path/to/artifact</span></span><br><span class="line">        <span class="string">echo</span> <span class="string">hello</span> <span class="string">&gt;</span> <span class="string">path/to/artifact/world.txt</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/upload-artifact@v1</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">          <span class="attr">name:</span> <span class="string">my-artifact</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">path/to/artifact</span></span><br></pre></td></tr></table></figure><p>参考链接:</p><p><a href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html">阮一峰的网络日志:GitHub Actions 入门教程</a></p><p><a href="https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions">action/setup-python的官方文档</a></p><p><a href="https://github.com/actions/upload-artifact">actions/upload-artifact</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Github Action </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++博客收藏汇总</title>
+      <link href="2020/03/01/C-%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E6%B1%87%E6%80%BB/"/>
+      <url>2020/03/01/C-%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E6%B1%87%E6%80%BB/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1><h2 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h2><p><a href="https://www.cnblogs.com/chenwx-jay/p/inline_cpp.html">c++内联函数解析（inline）</a></p><p><a href="https://www.cnblogs.com/msdn1433/p/3569176.html">C++ inline(内联什么时候使用)</a></p><h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><p><a href="https://blog.csdn.net/piaoxuezhong/article/details/54348787">C++中STL用法总结</a></p><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><p><a href="https://www.cnblogs.com/zhonghuasong/p/5975979.html">C++ STL之vector用法总结</a></p><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h3><p><a href="https://blog.csdn.net/a769973411/article/details/80112655">c++ 排列和字典序全排列解析</a></p><h3 id="最大最小值"><a href="#最大最小值" class="headerlink" title="最大最小值"></a>最大最小值</h3><p><a href="https://blog.csdn.net/yangyangyang20092010/article/details/47863477">C++ Vector 最大 最小值 索引 位置</a></p><h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><p><a href="https://blog.csdn.net/Ackerman2/article/details/103780911">c++STL库中find()的简单使用示例</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo 个人博客搭建历程</title>
+      <link href="2020/03/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/"/>
+      <url>2020/03/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p>参考知乎这个链接</p><p><a href="https://zhuanlan.zhihu.com/p/106166402">https://zhuanlan.zhihu.com/p/106166402</a></p><p>B站里up主Codesheep也有搭建视频</p><p><a href="https://www.bilibili.com/video/av44544186/">https://www.bilibili.com/video/av44544186/</a></p><h1 id="大体步骤"><a href="#大体步骤" class="headerlink" title="大体步骤"></a>大体步骤</h1><ol><li>安装 git</li><li>安装Node.js</li><li>在Node.js里安装Hexo</li><li>选取喜欢的主题套用修改</li></ol><h1 id="安装中碰到的问题-amp-解决方案"><a href="#安装中碰到的问题-amp-解决方案" class="headerlink" title="安装中碰到的问题&amp;解决方案"></a>安装中碰到的问题&amp;解决方案</h1><p><a href="https://blog.csdn.net/weixin_36401046/article/details/52940313">hexo d后 ERROR Deployer not found: git</a></p><p><a href="https://blog.csdn.net/weixin_45122120/article/details/91872691">解决git下载很慢的问题</a></p><p><a href="https://blog.csdn.net/qq_27093465/article/details/72954725?locationNum=6&fps=1">HEXO安装(Win7 64 bit )，遇到cmd报错：’hexo’ 不是内部或外部命令，也不是可运行的程序</a><br>(简单总结：需要配置hexo的环境变量)</p><p>Tips：</p><ol><li><p>把出现的错误代码直接复制到百度就可找到解决方法</p></li><li><p>在下载国外的一些工具时,可以考虑下载镜像,速度飞起</p></li></ol><h1 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h1><p>创建新文件：</p><pre><code>hexo n &quot;新的文章名&quot;</code></pre><p>生成页面：</p><pre><code>hexo g </code></pre><p>在本地浏览器查看效果:</p><pre><code>hexo s</code></pre><p>部署到远端服务器:</p><pre><code>hexo d</code></pre><h1 id="更多资料"><a href="#更多资料" class="headerlink" title="更多资料"></a>更多资料</h1><p>另外发现更多的Hexo教程<br><a href="http://ijiaober.github.io/categories/hexo/">Hexo使用攻略</a></p><p><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/tags/Icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97/">Icarus中文用户指南</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
