@@ -198,7 +198,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -245,6 +245,122 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ackermannn.github.io/2020/05/24/postgresql%E4%BD%BF%E7%94%A8%E9%80%9F%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/dl.jpg">
+      <meta itemprop="name" content="Ackermannn">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ackermannn's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/05/24/postgresql%E4%BD%BF%E7%94%A8%E9%80%9F%E8%AE%B0/" class="post-title-link" itemprop="url">postgresql使用速记</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-24 21:58:46" itemprop="dateCreated datePublished" datetime="2020-05-24T21:58:46+08:00">2020-05-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-23 15:58:13" itemprop="dateModified" datetime="2021-04-23T15:58:13+08:00">2021-04-23</time>
+      </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2020/05/24/postgresql%E4%BD%BF%E7%94%A8%E9%80%9F%E8%AE%B0/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://ackermannn.github.io/2020/05/24/postgresql%E4%BD%BF%E7%94%A8%E9%80%9F%E8%AE%B0/" class="cy_cmt_count" data-xid="2020/05/24/postgresql使用速记/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="基本使用1"><a href="#基本使用1" class="headerlink" title="基本使用1"></a>基本使用<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/34afe4072598">1</a></h1><p>登录</p>
+<pre><code>psql -U postgres</code></pre><p>创建数据库用户</p>
+<pre><code>CREATE USER user_name WITH PASSWORD &apos;password&apos;;</code></pre><p>创建用户数据库</p>
+<pre><code>CREATE DATABASE user_name OWNER user_name;</code></pre><p>给予权限</p>
+<pre><code>GRANT ALL PRIVILEGES ON DATABASE user_name to user_name;</code></pre><p>删除用户与数据库</p>
+<pre><code>DROP DATABASE user_name;
+DROP USER user_name;</code></pre><p>控制台命令</p>
+<pre><code>\l 列出所有数据库
+\d 列出当前数据库的所有表格
+\d [table_name] 列出某一张表格的结构
+\c [database_name] 切换数据库
+\c - [user_name] 切换用户</code></pre><p>查看数据库占用的物理存储空间大小<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liuyuanyuanGOGO/p/3224554.html">2</a></p>
+<p>sql语句查询：</p>
+<pre><code>postgres=# select pg_size_pretty(pg_database_size(&apos;postgres&apos;));
+
+pg_size_pretty
+----------------
+6229 kB
+(1 行记录)</code></pre><h1 id="配置PostgreSQL允许远程连接的方法"><a href="#配置PostgreSQL允许远程连接的方法" class="headerlink" title="配置PostgreSQL允许远程连接的方法"></a>配置PostgreSQL允许远程连接的方法</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014698745/article/details/86612511?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-6">配置PostgreSQL允许远程连接的方法（PostgreSQL新手入坑）</a></p>
+<p>linux 下怎么看postgresql安装到哪个目录了？</p>
+<pre><code>psql -U postgres -c &apos;SHOW config_file&apos;</code></pre><p>可参考以下配置文件目录：</p>
+<pre><code>sudo vim /var/lib/postgres/data/postgresql.conf
+sudo vim /var/lib/postgres/data/pg_hba.conf</code></pre><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/34afe4072598">https://www.jianshu.com/p/34afe4072598</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liuyuanyuanGOGO/p/3224554.html">https://www.cnblogs.com/liuyuanyuanGOGO/p/3224554.html</a></p>
+<h1 id="踩坑笔记"><a href="#踩坑笔记" class="headerlink" title="踩坑笔记"></a>踩坑笔记</h1><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>如果出现这种情况：</p>
+<pre><code>~ &gt;&gt;&gt; psql
+psql: error: could not connect to server: could not connect to server: No such file or directory
+        Is the server running locally and accepting
+        connections on Unix domain socket &quot;/run/postgresql/.s.PGSQL.5432&quot;?</code></pre><p>是根本没启动！！！<br>一个命令可直接启动</p>
+<pre><code>sudo systemctl start postgresql.service
+sudo systemctl restart postgresql.service</code></pre>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
