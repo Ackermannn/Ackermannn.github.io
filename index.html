@@ -198,7 +198,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -245,6 +245,117 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ackermannn.github.io/2021/04/29/%E5%8A%9B%E6%89%A3403-%E9%9D%92%E8%9B%99%E8%BF%87%E6%B2%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/dl.jpg">
+      <meta itemprop="name" content="Ackermannn">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ackermannn's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/29/%E5%8A%9B%E6%89%A3403-%E9%9D%92%E8%9B%99%E8%BF%87%E6%B2%B3/" class="post-title-link" itemprop="url">力扣403.青蛙过河</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-29 19:22:36 / 修改时间：19:31:48" itemprop="dateCreated datePublished" datetime="2021-04-29T19:22:36+08:00">2021-04-29</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/04/29/%E5%8A%9B%E6%89%A3403-%E9%9D%92%E8%9B%99%E8%BF%87%E6%B2%B3/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://ackermannn.github.io/2021/04/29/%E5%8A%9B%E6%89%A3403-%E9%9D%92%E8%9B%99%E8%BF%87%E6%B2%B3/" class="cy_cmt_count" data-xid="2021/04/29/力扣403-青蛙过河/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://pic.leetcode-cn.com/1619656977-DEvDOg-src=http___5b0988e595225.cdn.sohucs.com_images_20200508_327f15985a51404bb648f2f8e518045e.jpeg&refer=http___5b0988e595225.cdn.sohucs.jpeg" alt=""></p>
+<p>一只青蛙想要过河。 假定河流被等分为若干个单元格，并且在每一个单元格内都有可能放有一块石子（也有可能没有）。 青蛙可以跳上石子，但是不可以跳入水中。</p>
+<p>给你石子的位置列表 stones（用单元格序号 升序 表示）， 请判定青蛙能否成功过河（即能否在最后一步跳至最后一块石子上）。</p>
+<p>开始时， 青蛙默认已站在第一块石子上，并可以假定它第一步只能跳跃一个单位（即只能从单元格 1 跳至单元格 2 ）。</p>
+<p>如果青蛙上一步跳跃了 k 个单位，那么它接下来的跳跃距离只能选择为 k - 1、k 或 k + 1 个单位。 另请注意，青蛙只能向前方（终点的方向）跳跃。</p>
+<p>示例 1：</p>
+<blockquote>
+<p>输入：stones = [0,1,3,5,6,8,12,17]<br>输出：true<br>解释：青蛙可以成功过河，按照如下方案跳跃：跳 1 个单位到第 2 块石子, 然后跳 2 个单位到第 3 块石子, 接着 跳 2 个单位到第 4 块石子, 然后跳 3 个单位到第 6 块石子, 跳 4 个单位到第 7 块石子, 最后，跳 5 个单位到第 8 个石子（即最后一块石子）。</p>
+</blockquote>
+<p>示例 2：</p>
+<blockquote>
+<p>输入：stones = [0,1,2,3,4,8,9,11]<br>输出：false<br>解释：这是因为第 5 和第 6 个石子之间的间距太大，没有可选的方案供青蛙跳跃过去。</p>
+</blockquote>
+<p>提示：</p>
+<blockquote>
+<p>2 &lt;= stones.length &lt;= 2000<br>0 &lt;= stones[i] &lt;= 231 - 1<br>stones[0] == 0</p>
+</blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/frog-jump">https://leetcode-cn.com/problems/frog-jump</a></p>
+<h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><p>用户 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/frog-jump/solution/python-ji-yi-hua-hui-su-by-bryannliu-dgd0/">bryannliu</a> 的解答：</p>
+<blockquote>
+<p>这题和 55. 跳跃游戏 有点像，但是55 满足贪心选择性，所以直接用贪心算法做，这道题目因为有多种走法，所以得一个个试，用记忆化递归来做比较合适。</p>
+<p>因为每次有三种走法，要尝试每种可能，肯定有重复计算，所以加上备忘录。</p>
+<ol>
+<li>状态定义和参数：s(i, step) 表示当前是第i块时候，通过step步过来的，</li>
+<li>决策和状态转移：接下来就是根据走的步数做状态变换，这里状态变换只有三种 step-1, step, step + 1, 尝试每种可能的走法，看能不能走到最后一块。</li>
+</ol>
+</blockquote>
+<p>我这里的 recur(start, k) 中的 start 表示 stones数组顺序下标</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">canCross</span>(<span class="params">self, stones: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        n = <span class="built_in">len</span>(stones)</span><br><span class="line"></span><br><span class="line"><span class="meta">        @lru_cache(<span class="params"><span class="literal">None</span></span>)</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">recur</span>(<span class="params">start, k</span>):</span></span><br><span class="line">            <span class="keyword">if</span> start &gt;= n - <span class="number">1</span>: <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(start + <span class="number">1</span>, n):</span><br><span class="line">                <span class="keyword">if</span> stones[start] + k - <span class="number">1</span> == stones[i]:  <span class="comment"># 往后遍历找到 能以 k-1 步跳到的石子</span></span><br><span class="line">                    <span class="keyword">if</span> recur(i, k - <span class="number">1</span>): <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">                <span class="keyword">if</span> stones[start] + k == stones[i]:  <span class="comment"># 往后遍历找到 能以 k 步跳到的石子</span></span><br><span class="line">                    <span class="keyword">if</span> recur(i, k): <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">                <span class="keyword">if</span> stones[start] + k + <span class="number">1</span> == stones[i]:  <span class="comment"># 往后遍历找到 能以 k+1 步跳到的石子</span></span><br><span class="line">                    <span class="keyword">if</span> recur(i, k + <span class="number">1</span>): <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">                <span class="keyword">if</span> stones[start] + k + <span class="number">1</span> &lt; stones[i]: <span class="keyword">break</span>  <span class="comment"># 因stones的单调性 提早结束遍历</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> recur(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1185,98 +1296,6 @@
 <h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">PKL</span> Time used: <span class="number">0</span>.<span class="number">0913808</span></span><br><span class="line"><span class="attribute">CSV</span> Time used: <span class="number">0</span>.<span class="number">2128232</span></span><br><span class="line"><span class="attribute">EXCEL</span> Time used: <span class="number">10</span>.<span class="number">9964416</span></span><br></pre></td></tr></table></figure>
 <p>pickle完美胜出。参考链接中有大佬的更详细的比拼。</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d857c0f472f4">https://www.jianshu.com/p/d857c0f472f4</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ackermannn.github.io/2021/04/23/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/dl.jpg">
-      <meta itemprop="name" content="Ackermannn">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ackermannn's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/23/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-04-23 15:58:13" itemprop="dateCreated datePublished" datetime="2021-04-23T15:58:13+08:00">2021-04-23</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2021/04/23/hello-world/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://ackermannn.github.io/2021/04/23/hello-world/" class="cy_cmt_count" data-xid="2021/04/23/hello-world/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>

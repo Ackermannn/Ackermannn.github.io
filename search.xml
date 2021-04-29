@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++博客收藏汇总</title>
+    <url>/2020/03/01/C-%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1><h2 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h2><p><a href="https://www.cnblogs.com/chenwx-jay/p/inline_cpp.html">c++内联函数解析（inline）</a></p>
+<p><a href="https://www.cnblogs.com/msdn1433/p/3569176.html">C++ inline(内联什么时候使用)</a></p>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><p><a href="https://blog.csdn.net/piaoxuezhong/article/details/54348787">C++中STL用法总结</a></p>
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><p><a href="https://www.cnblogs.com/zhonghuasong/p/5975979.html">C++ STL之vector用法总结</a></p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h3><p><a href="https://blog.csdn.net/a769973411/article/details/80112655">c++ 排列和字典序全排列解析</a></p>
+<h3 id="最大最小值"><a href="#最大最小值" class="headerlink" title="最大最小值"></a>最大最小值</h3><p><a href="https://blog.csdn.net/yangyangyang20092010/article/details/47863477">C++ Vector 最大 最小值 索引 位置</a></p>
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><p><a href="https://blog.csdn.net/Ackerman2/article/details/103780911">c++STL库中find()的简单使用示例</a></p>
+]]></content>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>力扣1011.在D天内送达包裹的能力</title>
     <url>/2021/04/26/1011-%E5%9C%A8D%E5%A4%A9%E5%86%85%E9%80%81%E8%BE%BE%E5%8C%85%E8%A3%B9%E7%9A%84%E8%83%BD%E5%8A%9B/</url>
     <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>传送带上的包裹必须在 <code>D</code> 天内从一个港口运送到另一个港口。</p>
@@ -32,21 +47,6 @@
       </categories>
       <tags>
         <tag>力扣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++博客收藏汇总</title>
-    <url>/2020/03/01/C-%E5%8D%9A%E5%AE%A2%E6%94%B6%E8%97%8F%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1><h2 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h2><p><a href="https://www.cnblogs.com/chenwx-jay/p/inline_cpp.html">c++内联函数解析（inline）</a></p>
-<p><a href="https://www.cnblogs.com/msdn1433/p/3569176.html">C++ inline(内联什么时候使用)</a></p>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><p><a href="https://blog.csdn.net/piaoxuezhong/article/details/54348787">C++中STL用法总结</a></p>
-<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><p><a href="https://www.cnblogs.com/zhonghuasong/p/5975979.html">C++ STL之vector用法总结</a></p>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排列"><a href="#排列" class="headerlink" title="排列"></a>排列</h3><p><a href="https://blog.csdn.net/a769973411/article/details/80112655">c++ 排列和字典序全排列解析</a></p>
-<h3 id="最大最小值"><a href="#最大最小值" class="headerlink" title="最大最小值"></a>最大最小值</h3><p><a href="https://blog.csdn.net/yangyangyang20092010/article/details/47863477">C++ Vector 最大 最小值 索引 位置</a></p>
-<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><p><a href="https://blog.csdn.net/Ackerman2/article/details/103780911">c++STL库中find()的简单使用示例</a></p>
-]]></content>
-      <tags>
-        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -288,6 +288,46 @@ sudo systemctl restart postgresql.service</code></pre>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>力扣403.青蛙过河</title>
+    <url>/2021/04/29/%E5%8A%9B%E6%89%A3403-%E9%9D%92%E8%9B%99%E8%BF%87%E6%B2%B3/</url>
+    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><img src="https://pic.leetcode-cn.com/1619656977-DEvDOg-src=http___5b0988e595225.cdn.sohucs.com_images_20200508_327f15985a51404bb648f2f8e518045e.jpeg&refer=http___5b0988e595225.cdn.sohucs.jpeg" alt=""></p>
+<p>一只青蛙想要过河。 假定河流被等分为若干个单元格，并且在每一个单元格内都有可能放有一块石子（也有可能没有）。 青蛙可以跳上石子，但是不可以跳入水中。</p>
+<p>给你石子的位置列表 stones（用单元格序号 升序 表示）， 请判定青蛙能否成功过河（即能否在最后一步跳至最后一块石子上）。</p>
+<p>开始时， 青蛙默认已站在第一块石子上，并可以假定它第一步只能跳跃一个单位（即只能从单元格 1 跳至单元格 2 ）。</p>
+<p>如果青蛙上一步跳跃了 k 个单位，那么它接下来的跳跃距离只能选择为 k - 1、k 或 k + 1 个单位。 另请注意，青蛙只能向前方（终点的方向）跳跃。</p>
+<p>示例 1：</p>
+<blockquote>
+<p>输入：stones = [0,1,3,5,6,8,12,17]<br>输出：true<br>解释：青蛙可以成功过河，按照如下方案跳跃：跳 1 个单位到第 2 块石子, 然后跳 2 个单位到第 3 块石子, 接着 跳 2 个单位到第 4 块石子, 然后跳 3 个单位到第 6 块石子, 跳 4 个单位到第 7 块石子, 最后，跳 5 个单位到第 8 个石子（即最后一块石子）。</p>
+</blockquote>
+<p>示例 2：</p>
+<blockquote>
+<p>输入：stones = [0,1,2,3,4,8,9,11]<br>输出：false<br>解释：这是因为第 5 和第 6 个石子之间的间距太大，没有可选的方案供青蛙跳跃过去。</p>
+</blockquote>
+<p>提示：</p>
+<blockquote>
+<p>2 &lt;= stones.length &lt;= 2000<br>0 &lt;= stones[i] &lt;= 231 - 1<br>stones[0] == 0</p>
+</blockquote>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：<a href="https://leetcode-cn.com/problems/frog-jump">https://leetcode-cn.com/problems/frog-jump</a></p>
+<h1 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h1><p>用户 <a href="https://leetcode-cn.com/problems/frog-jump/solution/python-ji-yi-hua-hui-su-by-bryannliu-dgd0/">bryannliu</a> 的解答：</p>
+<blockquote>
+<p>这题和 55. 跳跃游戏 有点像，但是55 满足贪心选择性，所以直接用贪心算法做，这道题目因为有多种走法，所以得一个个试，用记忆化递归来做比较合适。</p>
+<p>因为每次有三种走法，要尝试每种可能，肯定有重复计算，所以加上备忘录。</p>
+<ol>
+<li>状态定义和参数：s(i, step) 表示当前是第i块时候，通过step步过来的，</li>
+<li>决策和状态转移：接下来就是根据走的步数做状态变换，这里状态变换只有三种 step-1, step, step + 1, 尝试每种可能的走法，看能不能走到最后一块。</li>
+</ol>
+</blockquote>
+<p>我这里的 recur(start, k) 中的 start 表示 stones数组顺序下标</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">canCross</span>(<span class="params">self, stones: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        n = <span class="built_in">len</span>(stones)</span><br><span class="line"></span><br><span class="line"><span class="meta">        @lru_cache(<span class="params"><span class="literal">None</span></span>)</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">recur</span>(<span class="params">start, k</span>):</span></span><br><span class="line">            <span class="keyword">if</span> start &gt;= n - <span class="number">1</span>: <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(start + <span class="number">1</span>, n):</span><br><span class="line">                <span class="keyword">if</span> stones[start] + k - <span class="number">1</span> == stones[i]:  <span class="comment"># 往后遍历找到 能以 k-1 步跳到的石子</span></span><br><span class="line">                    <span class="keyword">if</span> recur(i, k - <span class="number">1</span>): <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">                <span class="keyword">if</span> stones[start] + k == stones[i]:  <span class="comment"># 往后遍历找到 能以 k 步跳到的石子</span></span><br><span class="line">                    <span class="keyword">if</span> recur(i, k): <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">                <span class="keyword">if</span> stones[start] + k + <span class="number">1</span> == stones[i]:  <span class="comment"># 往后遍历找到 能以 k+1 步跳到的石子</span></span><br><span class="line">                    <span class="keyword">if</span> recur(i, k + <span class="number">1</span>): <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">                <span class="keyword">if</span> stones[start] + k + <span class="number">1</span> &lt; stones[i]: <span class="keyword">break</span>  <span class="comment"># 因stones的单调性 提早结束遍历</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> recur(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>力扣</tag>
+        <tag>记忆化搜索</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>力扣69.x的平方根</title>
     <url>/2021/04/23/%E5%8A%9B%E6%89%A369-x%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9/</url>
     <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>实现 <code>int sqrt(int x)</code> 函数。</p>
@@ -324,6 +364,26 @@ sudo systemctl restart postgresql.service</code></pre>]]></content>
       </categories>
       <tags>
         <tag>力扣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实用python小工具--函数运行时间装饰器</title>
+    <url>/2021/04/23/%E5%AE%9E%E7%94%A8python%E5%B0%8F%E5%B7%A5%E5%85%B7-%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E8%A3%85%E9%A5%B0%E5%99%A8/</url>
+    <content><![CDATA[<p>装饰器定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import time</span><br><span class="line">def CalculateTime(a_func):</span><br><span class="line">    def wrapTheFunction():</span><br><span class="line">        start &#x3D; time.time()</span><br><span class="line">        a_func()</span><br><span class="line">        cost &#x3D; time.time() - start</span><br><span class="line">        print(f&quot;Function \&quot;&#123;a_func.__name__&#125;\&quot; cost : &#123;cost&#125; second(s).&quot;)</span><br><span class="line">    return wrapTheFunction</span><br></pre></td></tr></table></figure>
+
+<p>测试部分</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@CalculateTime</span><br><span class="line">def func():</span><br><span class="line">    s &#x3D; 0</span><br><span class="line">    for i in range(10 ** 7):</span><br><span class="line">        s +&#x3D; 1</span><br><span class="line">    print(s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    func()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line"><span class="number">10000000</span></span><br><span class="line"><span class="keyword">Function</span> <span class="title">&quot;func&quot;</span> cost : 1.7449958324432373 <span class="type">second</span>(s).</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -379,26 +439,6 @@ sudo systemctl restart postgresql.service</code></pre>]]></content>
         <tag>力扣</tag>
         <tag>java</tag>
         <tag>二叉树</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实用python小工具--函数运行时间装饰器</title>
-    <url>/2021/04/23/%E5%AE%9E%E7%94%A8python%E5%B0%8F%E5%B7%A5%E5%85%B7-%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4%E8%A3%85%E9%A5%B0%E5%99%A8/</url>
-    <content><![CDATA[<p>装饰器定义如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import time</span><br><span class="line">def CalculateTime(a_func):</span><br><span class="line">    def wrapTheFunction():</span><br><span class="line">        start &#x3D; time.time()</span><br><span class="line">        a_func()</span><br><span class="line">        cost &#x3D; time.time() - start</span><br><span class="line">        print(f&quot;Function \&quot;&#123;a_func.__name__&#125;\&quot; cost : &#123;cost&#125; second(s).&quot;)</span><br><span class="line">    return wrapTheFunction</span><br></pre></td></tr></table></figure>
-
-<p>测试部分</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@CalculateTime</span><br><span class="line">def func():</span><br><span class="line">    s &#x3D; 0</span><br><span class="line">    for i in range(10 ** 7):</span><br><span class="line">        s +&#x3D; 1</span><br><span class="line">    print(s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    func()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>结果</p>
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line"><span class="number">10000000</span></span><br><span class="line"><span class="keyword">Function</span> <span class="title">&quot;func&quot;</span> cost : 1.7449958324432373 <span class="type">second</span>(s).</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
