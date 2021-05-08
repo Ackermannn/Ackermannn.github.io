@@ -198,7 +198,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -245,6 +245,101 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ackermannn.github.io/2021/04/23/python%E8%AF%BB%E5%8F%96pickle-csv-excel%E6%96%87%E4%BB%B6%E9%80%9F%E5%BA%A6%E5%A4%A7%E6%AF%94%E6%8B%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/dl.jpg">
+      <meta itemprop="name" content="Ackermannn">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ackermannn's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/23/python%E8%AF%BB%E5%8F%96pickle-csv-excel%E6%96%87%E4%BB%B6%E9%80%9F%E5%BA%A6%E5%A4%A7%E6%AF%94%E6%8B%BC/" class="post-title-link" itemprop="url">python读取pickle,csv,excel文件速度大比拼</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-23 19:25:34 / 修改时间：19:27:01" itemprop="dateCreated datePublished" datetime="2021-04-23T19:25:34+08:00">2021-04-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/04/23/python%E8%AF%BB%E5%8F%96pickle-csv-excel%E6%96%87%E4%BB%B6%E9%80%9F%E5%BA%A6%E5%A4%A7%E6%AF%94%E6%8B%BC/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://ackermannn.github.io/2021/04/23/python%E8%AF%BB%E5%8F%96pickle-csv-excel%E6%96%87%E4%BB%B6%E9%80%9F%E5%BA%A6%E5%A4%A7%E6%AF%94%E6%8B%BC/" class="cy_cmt_count" data-xid="2021/04/23/python读取pickle-csv-excel文件速度大比拼/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>进行数据处理时数据量一大，excel文件就力不从心。<br>这次对三个文件格式的读取速度做大比拼。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">csv</span></span><br><span class="line"><span class="string">excel</span></span><br><span class="line"><span class="string">pkl</span></span><br><span class="line"><span class="string">速度大比拼</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">start = time.clock()</span><br><span class="line">df = pd.read_pickle(<span class="string">&#x27;table.pkl&#x27;</span>)</span><br><span class="line">elapsed = (time.clock() - start)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;PKL Time used:&quot;</span>, elapsed)</span><br><span class="line"></span><br><span class="line">start = time.clock()</span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;table.csv&#x27;</span>)</span><br><span class="line">elapsed = (time.clock() - start)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;CSV Time used:&quot;</span>, elapsed)</span><br><span class="line"></span><br><span class="line">start = time.clock()</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;table.xlsx&#x27;</span>)</span><br><span class="line">elapsed = (time.clock() - start)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;EXCEL Time used:&quot;</span>, elapsed)</span><br></pre></td></tr></table></figure>
+
+<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">PKL</span> Time used: <span class="number">0</span>.<span class="number">0913808</span></span><br><span class="line"><span class="attribute">CSV</span> Time used: <span class="number">0</span>.<span class="number">2128232</span></span><br><span class="line"><span class="attribute">EXCEL</span> Time used: <span class="number">10</span>.<span class="number">9964416</span></span><br></pre></td></tr></table></figure>
+<p>pickle完美胜出。参考链接中有大佬的更详细的比拼。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d857c0f472f4">https://www.jianshu.com/p/d857c0f472f4</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
