@@ -574,7 +574,7 @@ sudo systemctl restart postgresql.service</code></pre>]]></content>
         <tag>面试高频</tag>
         <tag>记忆化搜索</tag>
         <tag>数据结构与算法</tag>
-        <tag>面试笔试</tag>
+        <tag>笔试面试</tag>
       </tags>
   </entry>
   <entry>
@@ -602,6 +602,22 @@ sudo systemctl restart postgresql.service</code></pre>]]></content>
       <tags>
         <tag>力扣</tag>
         <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字节第四批笔试贪心题</title>
+    <url>/2021/09/12/%E5%AD%97%E8%8A%82%E7%AC%AC%E5%9B%9B%E6%89%B9%E7%AC%94%E8%AF%95%E8%B4%AA%E5%BF%83%E9%A2%98/</url>
+    <content><![CDATA[<p>2021-09-12字节后端岗位笔试第四题</p>
+<p>给出一组数</p>
+<p>累计选中和不能小于0 ，求最多选择的个数</p>
+<p>类似于 <a href="https://leetcode-cn.com/problems/p0NxJO/">https://leetcode-cn.com/problems/p0NxJO/</a></p>
+<p><img src="images/carbon21091201.png" alt=""></p>
+<p><img src="images/carbon21091202.png" alt=""></p>
+]]></content>
+      <tags>
+        <tag>数据结构与算法</tag>
+        <tag>笔试面试</tag>
+        <tag>贪心</tag>
       </tags>
   </entry>
 </search>
